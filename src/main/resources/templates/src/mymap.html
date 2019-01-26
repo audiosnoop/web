@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>modoomap@naver.com</title>
+
+    <#include "../modules/links.html">
+    <link rel="stylesheet" href="/dist/src/mymap.css">
+
+
+    <script type="text/html" id="item-template">
+        <div class="col-2" data-value="id:{{index}}">
+            <div class="list-item">
+                <div class="list-ctrl">
+                    <span class="list-btn" data-event="$modify">수정</span>
+                    <span class="list-btn" data-event="$remove">삭제</span>
+                </div>
+                <div class="list-img"></div>
+                <div class="list-info">
+                    <span class="list-brand">{{item.brand}}</span>
+                    <span class="list-name">{{item.name}}</span>
+                    <span class="list-datetime">{{item.datetime | date}}</span>
+                </div>
+            </div>
+        </div>
+    </script>
+
+</head>
+<body>
+
+
+<#include "../modules/nav.html">
+<#include "./mymap/aside.html">
+
+<main>
+
+
+    <div class="list-container">
+        <div class="list-header">
+            <span data-name="speaker">스피커</span>
+            <span class="list-btn" data-event="$add">+추가하기</span>
+        </div>
+        <div class="container-fluid list-groups">
+        </div>
+    </div>
+
+
+    <div class="list-container">
+        <div class="list-header">
+            <span data-name="amp">앰프</span>
+            <span class="list-btn" data-event="$add">+추가하기</span>
+        </div>
+        <div class="container-fluid list-groups">
+        </div>
+    </div>
+
+
+    <div class="list-container">
+        <div class="list-header">
+            <span data-name="digital">디지털 소스기기</span>
+            <span class="list-btn" data-event="$add">+추가하기</span>
+        </div>
+        <div class="container-fluid list-groups">
+        </div>
+    </div>
+
+
+    <div class="list-container">
+        <div class="list-header">
+            <span data-name="analog">아날로그 소스기기</span>
+            <span class="list-btn" data-event="$add">+추가하기</span>
+        </div>
+        <div class="container-fluid list-groups">
+        </div>
+    </div>
+
+
+    <div class="list-container">
+        <div class="list-header">
+            <span data-name="cable">케이블</span>
+            <span class="list-btn" data-event="$add">+추가하기</span>
+        </div>
+        <div class="container-fluid list-groups">
+        </div>
+    </div>
+
+
+    <div class="list-container">
+        <div class="list-header">
+            <span data-name="accessory">악세사리</span>
+            <span class="list-btn" data-event="$add">+추가하기</span>
+        </div>
+        <div class="container-fluid list-groups">
+        </div>
+    </div>
+
+</main>
+
+
+<div id="add-item">
+
+    <div class="block" data-event="$off"></div>
+
+    <div class="form-container">
+        <div class="header"></div>
+        <div class="form">
+            <div class="form-group row">
+                <label for="brand" class="col-sm-2 col-form-label">브랜드</label>
+                <div class="col-sm-10">
+                    <input class="form-control" name="brand" id="brand">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">모델명</label>
+                <div class="col-sm-10">
+                    <input class="form-control" name="name" id="name">
+                </div>
+            </div>
+        </div>
+        <div class="form-btns">
+            <span class="confirm" data-event="$commit">확인</span>
+            <span class="cancel" data-event="$off">취소</span>
+        </div>
+    </div>
+</div>
+
+<#include "../modules/footer.html">
+<script src="/dist/src/mymap.js"></script>
+</body>
+</html>

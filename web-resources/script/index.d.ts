@@ -1,0 +1,7 @@
+
+
+interface global {
+
+    query?: {}
+
+}

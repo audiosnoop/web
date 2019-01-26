@@ -1,0 +1,26 @@
+
+
+@import "./_fonts/roboto";
+@import "./_fonts/NanumGothic";
+
+
+@import "./_bagic-bootstrap.scss";
+@import "variable";
+
+@import "./component/nav";
+
+body {
+  padding-top: $navbar-height;
+  color: $text-color;
+
+  &, pre, textarea {
+    font-family: 'Roboto', 'Nanum Gothic';
+    margin: 0;
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}

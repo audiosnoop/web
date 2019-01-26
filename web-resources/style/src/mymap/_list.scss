@@ -1,0 +1,174 @@
+
+
+#add-item {
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &.on {
+    display: flex;
+  }
+
+  &, .block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .block {
+    z-index: -1;
+    opacity: .7;
+    background-color: black;
+  }
+
+
+  .header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+    padding-bottom: .3rem;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .form-container {
+    padding: 3rem;
+    width: 700px;
+    background-color: white;
+    border-radius: 15px;
+  }
+
+  .form-btns {
+
+    display: flex;
+    justify-content: center;
+
+    > span {
+      padding: .7rem 2rem;
+      font-size: 14px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 24px;
+      color: white;
+
+      transition: background-color .3s ease;
+
+      &.confirm {
+        border-color: #78a776;
+        background-color: #8ecc8b;
+        &:hover {
+          background-color: #86c583;
+        }
+      }
+
+      &.cancel {
+        margin-left: 1rem;
+        border-color: #ce9494;
+        background-color: #e6bcbc;
+        &:hover {
+          background-color: #d8acac;
+        }
+      }
+    }
+  }
+}
+
+.list-container {
+
+  & + .list-container {
+    margin-top: 5rem;
+  }
+
+  .list-btn {
+    font-size: 12px;
+    color: #95c3e4;
+    letter-spacing: -.05em;
+    transition: color ease .3s;
+    cursor: pointer;
+
+    &:hover {
+      color: #167cc5;
+    }
+
+    & + .list-btn {
+      margin-left: .05em;
+      padding-left: .4em;
+      border-left: 1px solid #e2e2e2;
+    }
+  }
+
+  .list-header {
+
+    display: flex;
+    align-items: center;
+
+    .list-btn {
+      margin-left: .5rem;
+    }
+  }
+
+  .list-groups {
+    border-top: 1px solid #ddd;
+  }
+
+  .list-caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $nav-background;
+  }
+
+  .list-body {
+    border: {
+      left: 1px solid #ddd;
+    }
+  }
+
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: .5rem;
+    border: 1px solid transparent;
+
+    transition: border .2s ease;
+
+    &:hover {
+      border-color: #eee;
+    }
+
+    .list-ctrl {
+      text-align: right;
+      font-size: 14px;
+    }
+
+    .list-img {
+      margin-bottom: 1rem;
+      height: 150px;
+      border: 1px solid #ddd;
+      background: {
+        size: contain;
+        repeat: no-repeat;
+        position: center;
+        color: #f5f5f5;
+      }
+    }
+
+    .list-info {
+      > span {
+        display: block;
+        text-align: center;
+      }
+
+      .list-brand {
+        color: #bd9f5a;
+      }
+
+      .list-datetime {
+        font-size: 14px;
+      }
+    }
+  }
+}

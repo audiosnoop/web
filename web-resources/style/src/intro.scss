@@ -1,0 +1,12 @@
+@import "../base";
+
+main {
+  .main-screen {
+    height: 600px;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+  }
+}
